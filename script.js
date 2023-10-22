@@ -1,19 +1,16 @@
 function addTask() {
-	// body...
 	const taskInput = document.getElementById('taskInput');
 	const taskText = taskInput.value.trim();
 
-	if (taskText !== ''){
+	if (taskText !== '') {
 		const taskList = document.getElementById('taskList');
 		const newTask = document.createElement('li');
-		newTask.innerHTML = `${taskText} <button onclick="removeTask(This)">Remove</button>`;
+		newTask.innerHTML = `${taskText} <button onclick="removeTask(this)">Remove</button>`;
 		taskList.appendChild(newTask);
-		taskInput.value='';
+		taskInput.value = '';
 	}
 }
 
-function removeTask(button){
-	button.parrentElement.remove();
+function removeTask(button) {
+	button.parentElement.remove();
 }
-
-correct this code
